@@ -37,7 +37,7 @@ public class Job {
             positionType.setValue("Data not available");
         }
             return "\n" +
-//                  "ID: " + getId() + '\n' +
+                    "ID: " + hashCode() + '\n' +
                     "Name: " + getName() + '\n' +
                     "Employer: " + getEmployer() + '\n' +
                     "Location: " + getLocation() + '\n' +
