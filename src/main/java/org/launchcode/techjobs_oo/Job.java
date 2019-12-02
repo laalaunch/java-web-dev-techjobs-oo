@@ -27,21 +27,21 @@ public class Job {
         if (name.isEmpty()) {
             name = "Data not available";
         }
-        if (employer.getValue() == null) {
+        if (employer.getValue().isEmpty()) {
             employer.setValue("Data not available");
         }
-        if (location.getValue() == null) {
+        if (location.getValue().isEmpty()) {
             location.setValue("Data not available");
         }
-        if (positionType.getValue() == null) {
+        if (positionType.getValue().isEmpty()) {
             positionType.setValue("Data not available");
         }
             return "\n" +
                     "ID: " + hashCode() + '\n' +
                     "Name: " + getName() + '\n' +
-                    "Employer: " + getEmployer() + '\n' +
-                    "Location: " + getLocation() + '\n' +
-                    "Position Type: " + getPositionType().getValue() + '\n' +
+                    "Employer: " + getEmployer().getValue() + '\n' +
+                    "Location: " + getLocation().getValue() + '\n' +
+                    "Position Type: " + getPositionType() + '\n' +
                     "Core Competency: " + getCoreCompetency() + '\n' +
                     "";
         }

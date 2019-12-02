@@ -41,16 +41,16 @@ public class JobTest {
     }
 
     @Test
-    public void testJobsStringOutput() {
-        Job job = new Job ("Coder", new Employer(), new Location(), new PositionType("Tester"), new CoreCompetency("Agile"));
+    public void testJobsEmptyOutput() {
+        Job job = new Job ("Coder", new Employer(""), new Location(""), new PositionType("Tester"), new CoreCompetency("Agile"));
 
         if (job.getName().isEmpty()) {
             job.setName("Data not available");
         }
-        if (job.getEmployer().getValue() == null) {
+        if (job.getEmployer().getValue().isEmpty()) {
             job.setEmployer(new Employer("Data not available"));
         }
-        if (job.getLocation().getValue() == null) {
+        if (job.getLocation().getValue().isEmpty()) {
             job.setLocation(new Location("Data not available"));
         }
         if (job.getPositionType() == null) {
@@ -63,9 +63,9 @@ public class JobTest {
             String expected = "\n" +
                     "ID: " + job.hashCode() + '\n' +
                     "Name: " + job.getName() + '\n' +
-                    "Employer: " + job.getEmployer() + '\n' +
-                    "Location: " + job.getLocation() + '\n' +
-                    "Position Type: " + job.getPositionType().getValue() + '\n' +
+                    "Employer: " + job.getEmployer().getValue() + '\n' +
+                    "Location: " + job.getLocation().getValue() + '\n' +
+                    "Position Type: " + job.getPositionType() + '\n' +
                     "Core Competency: " + job.getCoreCompetency() + '\n' +
                     "";
 
