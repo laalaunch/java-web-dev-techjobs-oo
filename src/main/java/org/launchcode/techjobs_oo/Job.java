@@ -24,25 +24,25 @@ public class Job {
     @Override
     public String toString() {
 
-        if (name.isEmpty()) {
-            name = "Data not available";
+        if (name == null) {
+            return "Data not available";
         }
-        if (employer.getValue().isEmpty()) {
-            employer.setValue("Data not available");
+        if (employer == null) {
+            return "Data not available";
         }
-        if (location.getValue().isEmpty()) {
-            location.setValue("Data not available");
+        if (location == null) {
+            return "Data not available";
         }
-        if (positionType.getValue().isEmpty()) {
-            positionType.setValue("Data not available");
+        if (positionType == null) {
+            return "Data not available";
         }
             return "\n" +
-                    "ID: " + hashCode() + '\n' +
+                    "ID: " + getEmployer().getId() + '\n' +
                     "Name: " + getName() + '\n' +
                     "Employer: " + getEmployer().getValue() + '\n' +
                     "Location: " + getLocation().getValue() + '\n' +
-                    "Position Type: " + getPositionType() + '\n' +
-                    "Core Competency: " + getCoreCompetency() + '\n' +
+                    "Position Type: " + getPositionType().getValue() + '\n' +
+                    "Core Competency: " + getCoreCompetency().getValue() + '\n' +
                     "";
         }
 

@@ -61,7 +61,7 @@ public class JobTest {
         }
 
             String expected = "\n" +
-                    "ID: " + job.hashCode() + '\n' +
+                    "ID: " + job.getEmployer().getId() + '\n' +
                     "Name: " + job.getName() + '\n' +
                     "Employer: " + job.getEmployer().getValue() + '\n' +
                     "Location: " + job.getLocation().getValue() + '\n' +
