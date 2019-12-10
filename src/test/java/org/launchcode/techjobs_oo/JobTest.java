@@ -14,8 +14,8 @@ public class JobTest {
 
     @Before
     public void setUp() throws Exception {
-        test_id1 = new Job().hashCode();
-        test_id2 = new Job().hashCode();
+        test_id1 = new Job().getId();
+        test_id2 = new Job().getId();
     }
 
     @Test
